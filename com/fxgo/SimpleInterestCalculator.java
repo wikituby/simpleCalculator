@@ -17,6 +17,7 @@ public class SimpleInterestCalculator {
 
         switch (x) {
             case 1:
+                System.out.println("");
                 System.out.println("simple interest paid per day");
 
                 System.out.print("please enter principal");
@@ -31,7 +32,7 @@ public class SimpleInterestCalculator {
 
                 break;
             case 2:
-
+                System.out.println("");
                 System.out.println("simple interest paid per Week");
 
                 System.out.print("please enter principal");
@@ -45,7 +46,7 @@ public class SimpleInterestCalculator {
 
                 break;
             case 3:
-
+                System.out.println("");
                 System.out.println("simple interest paid per Month");
 
                 System.out.print("please enter principal");
@@ -57,6 +58,7 @@ public class SimpleInterestCalculator {
                 System.out.print("simple interest paid per day: Shs:"+ principal3*rateCalPerMonth4);
                 break;
             case 4:
+                System.out.println("");
                 System.out.println("simple interest paid per Year");
 
                 System.out.print("please enter principal");
@@ -70,6 +72,7 @@ public class SimpleInterestCalculator {
                 break;
 
             case 5:
+                System.out.println("");
                 System.out.println("interest rate per Month");
 
                 System.out.print("please enter amount you want to take");
@@ -83,6 +86,7 @@ public class SimpleInterestCalculator {
                 break;
 
             case 6:
+                System.out.println("");
                 MySimpCalOuterClass objoutermainclass= new MySimpCalOuterClass();
                 objoutermainclass.mySimplecalMethod();
                 break;

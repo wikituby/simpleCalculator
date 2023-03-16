@@ -31,7 +31,7 @@ public class NssfCalculator {
                 double nssfCharge = input.nextDouble();
                 System.out.print("please enter GrossIncome");
                 double grossIncome2 = input.nextDouble();
-                System.out.print("NSSF Rate is: "+ (nssfCharge/grossIncome2)+ "%");
+                System.out.print("NSSF Rate is: "+ ((nssfCharge/grossIncome2)*100)+ "%");
                 break;
             case 3:
 
@@ -52,6 +52,12 @@ public class NssfCalculator {
                 double nssfCharge2 = input.nextDouble();
                 System.out.print("GrossIncome is: Shs:"+ (nssfCharge2/nssfRate));
                 break;
+            case 5:
+                System.out.println("");
+                MySimpCalOuterClass objoutermainclass= new MySimpCalOuterClass();
+                objoutermainclass.mySimplecalMethod();
+                break;
+
             default:
                 System.out.println("Invalid choice please select a specific service form the menu.");
                 System.exit(0);
