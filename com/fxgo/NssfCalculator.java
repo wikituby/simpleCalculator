@@ -52,7 +52,7 @@ public class NssfCalculator {
 
             System.out.print("please enter NSSF Charge");
             double nssfCharge = input.nextDouble();
-            System.out.print("NetIncome is: Shs:"+ (nssfCharge/nssfRate));
+            System.out.print("GrossIncome is: Shs:"+ (nssfCharge/nssfRate));
 
 
         } else if (myNssfCal==5) {
