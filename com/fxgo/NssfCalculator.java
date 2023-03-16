@@ -42,7 +42,8 @@ public class NssfCalculator {
                 double grossIncome3 = input.nextDouble();
                 System.out.print("please enter NSSF Charge");
                 double nssfCharge1 = input.nextDouble();
-                System.out.print("NetIncome is: Shs:"+ (grossIncome3-nssfCharge1));                break;
+                System.out.print("NetIncome is: Shs:"+ (grossIncome3-nssfCharge1));
+                break;
             case 4:
                 System.out.println();
                 System.out.println("Calculating GrossIncome before NSSF Charge");
@@ -55,55 +56,6 @@ public class NssfCalculator {
                 System.out.println("Invalid choice please select a specific service form the menu.");
                 System.exit(0);
         }
-/*
-        if(myNssfCal==1){
-            System.out.println();
-            System.out.println("Calculating NSSF Charge");
-            System.out.print("please enter GrossIncome");
-            double grossIncome = input.nextDouble();
-            System.out.print("NSSF Charge is: Shs:"+ grossIncome*nssfRate);
 
-
-        } else if (myNssfCal==2) {
-            System.out.println();
-            System.out.println("Calculating NSSF Rate");
-
-            System.out.print("please enter NSSF Charge");
-            double nssfCharge = input.nextDouble();
-            System.out.print("please enter GrossIncome");
-            double grossIncome = input.nextDouble();
-            System.out.print("NSSF Rate is: "+ (nssfCharge/grossIncome)+ "%");
-
-
-        } else if (myNssfCal==3) {
-
-            System.out.println();
-            System.out.println("Calculating NetIncome after NSSF Charge");
-
-            System.out.print("please enter GrossIncome");
-            double grossIncome = input.nextDouble();
-            System.out.print("please enter NSSF Charge");
-            double nssfCharge = input.nextDouble();
-            System.out.print("NetIncome is: Shs:"+ (grossIncome-nssfCharge));
-
-
-        } else if (myNssfCal==4) {
-
-            System.out.println();
-            System.out.println("Calculating GrossIncome before NSSF Charge");
-
-            System.out.print("please enter NSSF Charge");
-            double nssfCharge = input.nextDouble();
-            System.out.print("GrossIncome is: Shs:"+ (nssfCharge/nssfRate));
-
-
-        } else if (myNssfCal==5) {
-            MySimpCalOuterClass objoutermainclass= new MySimpCalOuterClass();
-            objoutermainclass.mySimplecalMethod();
-        }
-
-*/
-        //System.out.println("NSSF Contribution per month shs: " + nssfRate * salary);
-        //System.out.println("Net Income to be paid as salary shs: " + (salary - (nssfRate * salary)));
     }
 }
