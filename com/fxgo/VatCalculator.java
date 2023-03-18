@@ -7,18 +7,25 @@ public class VatCalculator {
         final double VAT_CHARGE = 0.18; // 18% VAT rate
         Scanner input = new Scanner(System.in);
 
-        System.out.print("VAT Calculator:\n1.Calculate VAT Amount to be paid\n2.Calculate total cost of the goods and VAT\n3.Calculate VAT Rate\n4.Back to Main Menu ");
+        String myString = """
+                VAT Calculator:
+                1.Calculate VAT Amount to be paid
+                2.Calculate total cost of the goods and VAT
+                3.Calculate VAT Rate
+                4.Back to Main Menu
+                                """;
+        System.out.println(myString);
         int x = (int) input.nextDouble();
 
-        switch (x){
+        switch (x) {
             case 1:
                 System.out.println("");
                 System.out.println("Calculate VAT Amount to be paid");
 
                 System.out.println("Enter the cost of the goods");
                 double priceOfGoods = input.nextDouble();
-                double vatAmount = priceOfGoods*VAT_CHARGE;
-                System.out.print("VAT Amount to be paid is: Shs:"+vatAmount);
+                double vatAmount = priceOfGoods * VAT_CHARGE;
+                System.out.print("VAT Amount to be paid is: Shs:" + vatAmount);
                 System.out.println("");
                 Back backobj7 = new Back();
                 backobj7.myBackMethod();
@@ -31,8 +38,8 @@ public class VatCalculator {
                 double priceOfGoods2 = input.nextDouble();
                 System.out.print("Enter the VAT Amount");
                 double vatAmount2 = input.nextDouble();
-                double totalCost = (priceOfGoods2+vatAmount2);
-                System.out.print("Total cost of the goods plus VAT to be paid is: Shs:"+totalCost);
+                double totalCost = (priceOfGoods2 + vatAmount2);
+                System.out.print("Total cost of the goods plus VAT to be paid is: Shs:" + totalCost);
                 System.out.println("");
                 Back backobj8 = new Back();
                 backobj8.myBackMethod();
@@ -45,15 +52,15 @@ public class VatCalculator {
                 double vatAmount3 = input.nextDouble();
                 System.out.print("Enter the cost of the goods");
                 double priceOfGoods3 = input.nextDouble();
-                double vatRate = (vatAmount3/priceOfGoods3);
-                System.out.print("VAT Rate is: "+vatRate*100+"%");
+                double vatRate = (vatAmount3 / priceOfGoods3);
+                System.out.print("VAT Rate is: " + vatRate * 100 + "%");
                 System.out.println("");
                 Back backobj9 = new Back();
                 backobj9.myBackMethod();
                 break;
             case 4:
                 System.out.println("");
-                MySimpCalOuterClass objoutermainclass= new MySimpCalOuterClass();
+                MySimpCalOuterClass objoutermainclass = new MySimpCalOuterClass();
                 objoutermainclass.mySimplecalMethod();
                 break;
             default:

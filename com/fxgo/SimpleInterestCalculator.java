@@ -4,16 +4,25 @@ import java.util.Scanner;
 
 public class SimpleInterestCalculator {
     public void mySical() {
-        double fixedRate=0;
+        double fixedRate = 0;
         //calculate simple interest
         Scanner scanner = new Scanner(System.in);
 
         System.out.println();
         System.out.println("Simple Interest Calculator");
 
-        System.out.println("Please chose what to calculate\n1.simple interest to be paid per day\n2.simple interest to be paid per Week\n3.simple interest to be paid per Month\n4.simple interest to be paid per Year\n5.interest rate per Month\n6.Back to Main Menu");
-        int x = Integer.parseInt(scanner.nextLine());
+        String myString = """
+                Please chose what to calculate
+                1.simple interest to be paid per day
+                2.simple interest to be paid per Week
+                3.simple interest to be paid per Month
+                4.simple interest to be paid per Year
+                5.interest rate per Month
+                6.Back to Main Menu
+                                """;
+        System.out.println(myString);
 
+        int x = Integer.parseInt(scanner.nextLine());
 
         switch (x) {
             case 1:
@@ -26,9 +35,9 @@ public class SimpleInterestCalculator {
                 System.out.print("please enter rate Per Month");
                 double rateCalPerMonth = Integer.parseInt(scanner.nextLine());
                 fixedRate = rateCalPerMonth;
-                double rateCalPerDay = (rateCalPerMonth / 100)/30;
+                double rateCalPerDay = (rateCalPerMonth / 100) / 30;
 
-                System.out.print("simple interest to be paid per day: Shs:"+ principal*rateCalPerDay);
+                System.out.print("simple interest to be paid per day: Shs:" + principal * rateCalPerDay);
 
                 System.out.println("");
                 Back backobj8 = new Back();
@@ -44,9 +53,9 @@ public class SimpleInterestCalculator {
 
                 System.out.print("please enter rate Per Month");
                 double rateCalPerMonth2 = Integer.parseInt(scanner.nextLine());
-                double rateCalPerWeek = ((rateCalPerMonth2 / 100)/30)*7;
+                double rateCalPerWeek = ((rateCalPerMonth2 / 100) / 30) * 7;
 
-                System.out.print("simple interest to be paid per Week 1s: Shs:"+ principal1*rateCalPerWeek);
+                System.out.print("simple interest to be paid per Week 1s: Shs:" + principal1 * rateCalPerWeek);
 
                 System.out.println("");
                 Back backobj6 = new Back();
@@ -63,7 +72,7 @@ public class SimpleInterestCalculator {
                 System.out.print("please enter rate Per Month");
                 double rateCalPerMonth4 = Integer.parseInt(scanner.nextLine());
 
-                System.out.print("simple interest paid per day: Shs:"+ principal3*rateCalPerMonth4);
+                System.out.print("simple interest paid per day: Shs:" + principal3 * rateCalPerMonth4);
                 System.out.println("");
                 Back backobj5 = new Back();
                 backobj5.myBackMethod();
@@ -77,9 +86,9 @@ public class SimpleInterestCalculator {
 
                 System.out.print("please enter rate Per Month");
                 double rateCalPerMonth5 = Integer.parseInt(scanner.nextLine());
-                double rateCalPerYear = (rateCalPerMonth5/100)*12;
+                double rateCalPerYear = (rateCalPerMonth5 / 100) * 12;
 
-                System.out.print("simple interest paid per Year: Shs:"+ principal5*rateCalPerYear);
+                System.out.print("simple interest paid per Year: Shs:" + principal5 * rateCalPerYear);
                 System.out.println("");
                 Back backobj4 = new Back();
                 backobj4.myBackMethod();
@@ -94,8 +103,8 @@ public class SimpleInterestCalculator {
 
                 System.out.print("please enter Simple Interest you want to Per Month");
                 double simpleInterestPerMonth = Integer.parseInt(scanner.nextLine());
-                double rateCalPerMonth7 = (simpleInterestPerMonth/principal6);
-                System.out.print("interest rate per Month: "+ rateCalPerMonth7*100 + "%");
+                double rateCalPerMonth7 = (simpleInterestPerMonth / principal6);
+                System.out.print("interest rate per Month: " + rateCalPerMonth7 * 100 + "%");
                 System.out.println("");
                 Back backobj = new Back();
                 backobj.myBackMethod();
@@ -104,7 +113,7 @@ public class SimpleInterestCalculator {
 
             case 6:
                 System.out.println("");
-                MySimpCalOuterClass objoutermainclass= new MySimpCalOuterClass();
+                MySimpCalOuterClass objoutermainclass = new MySimpCalOuterClass();
                 objoutermainclass.mySimplecalMethod();
                 break;
             default:
