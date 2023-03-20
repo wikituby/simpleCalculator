@@ -6,10 +6,13 @@ public class MySimpCalOuterClass {
     public void mySimplecalMethod() {
         int simpleCal;
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Your Simple Calculator");
-
-        System.out.println("1.Calculate VAT\n2.Calculate NSSF\n3.Calculate Loan");
+        String myString = """
+                Your Simple Calculator:
+                1.Calculate VAT
+                2.Calculate NSSF
+                3.Calculate Loan
+                                """;
+        System.out.println(myString);
         simpleCal = Integer.parseInt(scanner.nextLine());
 
         if (simpleCal == 1) {
