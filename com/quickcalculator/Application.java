@@ -55,13 +55,17 @@ public class Application {
                 calculator.setGrossAmount(grossAmount);
 
                 calculator.calculateNetAmount();
+                System.out.println("1.NetAmount is shs:" + calculator.getNetAmount() +" "+ " Vat is:"+ calculator.getVat());
+
             }
             case 2 -> {
-                System.out.print("\nEnter net amount: ");
-                double netAmount = menuInput.nextDouble();
-                calculator.setNetAmount(netAmount);
+                System.out.print("\nEnter Vat amount: ");
+                double vat = menuInput.nextDouble();
+                calculator.setVat(vat);
 
                 calculator.calculateGrossAmount();
+                System.out.println("1.GrossAmount is shs:" + calculator.getGrossAmount() +" "+" NetIncome IS :"+ calculator.getNetAmount());
+
             }
             case 3 -> {
                 System.out.print("\nEnter gross amount: ");
@@ -73,15 +77,11 @@ public class Application {
                 calculator.setNetAmount(netAmount);
 
                 calculator.calculateRate();
+                System.out.println("Rate is:" + calculator.getRate() +" "+" VAT IS :"+ calculator.getVat());
+
             }
             default -> throw new IllegalArgumentException("Unexpected VAT option: " + vatOption);
         }
-
-        String output = String.format("%s %-15.2f %s %-15.2f %s %-15.2f %s %-15.2f", "Amount: ", calculator
-                        .getGrossAmount(), "VAT%: ", calculator.getRate() * 100,
-                "VAT: ", calculator.getVat(), "Net Amount: ", calculator.getNetAmount());
-
-        System.out.println(output);
 
         displayHomeMenu();
     }
@@ -111,14 +111,17 @@ public class Application {
                 calculator.setGrossAmount(grossAmount);
 
                 calculator.calculateNetAmount();
+                System.out.println("NetAmount is:" + calculator.getNetAmount() +" "+" NSSF is :"+ calculator.getNssf());
+
 
             }
             case 2 -> {
-                System.out.print("\nEnter net amount: ");
-                double netAmount = menuInput.nextDouble();
-                calculator.setNetAmount(netAmount);
-
+                System.out.print("\nEnter nssf amount: ");
+                double nssf = menuInput.nextDouble();
+                calculator.setNssf(nssf);
                 calculator.calculateGrossAmount();
+                System.out.println("Gross Amount is:" + calculator.getGrossAmount() +" "+" NSSF is :"+ calculator.getNssf());
+
             }
             case 3 -> {
                 System.out.print("\nEnter gross amount: ");
@@ -130,15 +133,23 @@ public class Application {
                 calculator.setNetAmount(netAmount);
 
                 calculator.calculateRate();
+                System.out.println("RATE is:" + calculator.getRate() +" "+" NSSF is :"+ calculator.getNssf());
+
             }
+
+            case 4 -> {
+                System.out.print("\nEnter gross amount: ");
+                double grossAmount = menuInput.nextDouble();
+                calculator.setGrossAmount(grossAmount);
+
+                calculator.calculateNssf();
+                System.out.println("NSSF Amount is:" + calculator.getNssf() +" "+" NetAmount is :"+ calculator.getNetAmount());
+
+            }
+
             default -> throw new IllegalArgumentException("Unexpected NSSF option: " + nssfOption);
         }
 
-        String output = String.format("%s %-15.2f %s %-15.2f %s %-15.2f %s %-15.2f", "Amount: ", calculator
-                        .getGrossAmount(), "NSSF%: ", calculator.getRate() * 100,
-                "NSSF: ", calculator.getNssf(), "Net Amount: ", calculator.getNetAmount());
-
-        System.out.println(output);
 
         displayHomeMenu();
     }

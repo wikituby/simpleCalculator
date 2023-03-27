@@ -35,20 +35,26 @@ public class NSSFCalculator {
     }
 
     public void calculateNetAmount() {
-        this.nssf = 0.05;
-        this.netAmount = this.grossAmount / (1 + this.nssf);
+        this.rate = 0.05;
+        this.nssf = this.grossAmount*this.rate;
+        this.netAmount = this.grossAmount-this.nssf;
         this.nssf = this.grossAmount - this.netAmount;
     }
 
     public void calculateGrossAmount() {
-        this.nssf = 0.18;
-        this.nssf = this.netAmount + (this.netAmount * this.nssf);
-        this.grossAmount = this.grossAmount + this.nssf;
+        this.rate = 0.05;
+        this.grossAmount = this.nssf / this.rate;
+        this.netAmount = this.grossAmount*this.rate;
     }
 
     public void calculateRate() {
         this.rate = ((this.grossAmount / this.netAmount) - 1);
         this.nssf = this.grossAmount - this.netAmount;
+    }
+    public  void calculateNssf(){
+        this.rate=0.05;
+        this.nssf = this.grossAmount*this.rate;
+        this.netAmount = this.grossAmount-this.nssf;
     }
 
     public double getRate() {
