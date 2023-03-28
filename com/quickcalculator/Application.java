@@ -113,7 +113,6 @@ public class Application {
                 calculator.calculateNetAmount();
                 System.out.println("NetAmount is:" + calculator.getNetAmount() +" "+" NSSF is :"+ calculator.getNssf());
 
-
             }
             case 2 -> {
                 System.out.print("\nEnter nssf amount: ");
@@ -134,7 +133,6 @@ public class Application {
 
                 calculator.calculateRate();
                 System.out.println("RATE is:" + calculator.getRate() +" "+" NSSF is :"+ calculator.getNssf());
-
             }
 
             case 4 -> {
@@ -187,8 +185,6 @@ public class Application {
                 calculator.calculateInterestToBePaidPerMonth();
                 System.out.println("1.interest paid per Month is shs:" + calculator.getInterestToBePaidPerMonth()+" "+" interest paid per day is shs:" + calculator.getInterestToBePaidPerDay()+" "+"  interest paid per Week is shs:" + calculator.getInterestToBePaidPerWeek()+" "+"  interest paid per Year is shs:" + calculator.getInterestToBePaidPerYear());
 
-
-
             }
             case 2 -> {
                 System.out.print("\nEnter amount to be Borrowed: ");
@@ -227,7 +223,6 @@ public class Application {
 
                 calculator.calculateInterestToBePaidPerYear();
                 System.out.println("1.interest paid per Year is shs:" + calculator.getInterestToBePaidPerYear()+" "+" interest paid per day is shs:" + calculator.getInterestToBePaidPerDay()+" "+"  interest paid per Week is shs:" + calculator.getInterestToBePaidPerWeek()+" "+"  interest paid per Month is shs:" + calculator.getInterestToBePaidPerMonth());
-
             }
             case 5 -> {
                 System.out.print("\ninterest to be paid per Month: ");
@@ -240,7 +235,6 @@ public class Application {
 
                 calculator.calculateAmountToBeBorrowed();
                 System.out.println("1.Amount to be borrowed:" + calculator.getAmountToBeBorrowed()+" "+" interest paid per day is shs:" + calculator.getInterestToBePaidPerDay()+" "+"  interest paid per Week is shs:" + calculator.getInterestToBePaidPerWeek());
-
             }
             case 6 -> {
                 System.out.print("\ninterest to be paid per Month: ");
@@ -257,18 +251,6 @@ public class Application {
             }
             default -> throw new IllegalArgumentException("Unexpected NSSF option: " + loanOption);
         }
-
-        /*System.out.println("1.interest paid per Month is shs:" + calculator.getInterestToBePaidPerMonth());
-        System.out.println("1.interest paid per day is shs:" + calculator.getInterestToBePaidPerDay());
-        System.out.println("1.interest paid per Week is shs:" + calculator.getInterestToBePaidPerWeek());
-        System.out.println("1.interest paid per Year is shs:" + calculator.getInterestToBePaidPerYear());
-        System.out.println("1.Rate per Month is :" + (calculator.getRatePerMonth())*100+"%");
-        System.out.println("1.Amount to be borrowed is shs:" + calculator.getAmountToBeBorrowed());
-*/
-        //String output = String.format("%s %-15.2f %s %-15.2f %s %-15.2f %s %-15.2f", "interest paid per Month is shs: ", calculator.getInterestToBePaidPerMonth(),
-        //"interest paid daily: ", calculator.getInterestToBePaidPerDay());
-        //System.out.println(output);
-
 
         displayHomeMenu();
     }
