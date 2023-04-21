@@ -95,7 +95,7 @@ public class Application {
                 1. Calculate Net Amount
                 2. Calculate Gross Amount
                 3. Calculate Rate Used
-                4. Calculate NSSF
+                4. Calculate NSSF AMOUNT
 
                 """;
 
